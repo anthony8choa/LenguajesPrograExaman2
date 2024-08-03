@@ -16,13 +16,15 @@ public class ClienteServicio {
     private ClienteRepositorio clienteRepositorio;
 
 
-    public Cliente crearCliente(Cliente nvoCliente){.
+    public Cliente crearCliente(Cliente nvoCliente){
         if(!this.clienteRepositorio.existsById(nvoCliente.getDni())){
             List<Prestamos> cuentaNueva = nvoCliente.getPrestamos();
-            
+            for(Prestamos cuentaGuardar : cuentaNueva){
+                cuentaGuardar.setCliente(nvoCliente);
+            }
         }
-          
-    
+        return null;
     }
+     
 
 }
