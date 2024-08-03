@@ -26,5 +26,8 @@ public class ClienteServicio {
         return null;
     }
      
+    public List<Cliente> mostrarTodas(){
+        return this.clienteRepositorio.findAll();
+    }
 
 }
