@@ -21,9 +21,13 @@ public class CuotaServicio {
 
 
     public Prestamos calcularcuota(){
+       int  calcular = 0;
+       int  tasa  = (int) (0.09/12);
 
-        
+       
       Prestamos prestamo = new Prestamos();
+
+      calcular = (int) ((prestamo.getMonto()* tasa)/ ((Math.pow((1+tasa),60))-1));
 
         return null;
 
